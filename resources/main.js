@@ -35,9 +35,9 @@ document.head.appendChild(sheet);
 var backgroundAudio = document.getElementById('backgroundAudio');
 var clickAudio      = document.getElementById('click');
 var hoverAudio      = document.getElementById('hover');
-backgroundAudio.volume = 0.1; 
-clickAudio.volume =      0.2;
-hoverAudio.volume =      0.2;      
+//backgroundAudio.volume = 0.1; 
+clickAudio.volume =      0.1;
+hoverAudio.volume =      0.1;      
 /*----------------------------------------------------------------------*/
 /*----------------------determina el video fit--------------------------*/
 /*----------------------------------------------------------------------*/
