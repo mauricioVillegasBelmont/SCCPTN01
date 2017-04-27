@@ -261,3 +261,4 @@ modalBackground.addEventListener('click',() =>{
     modalBackground.classList.remove('block');
     modal.src = '';
 });
+/**/
