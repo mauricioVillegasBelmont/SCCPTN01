@@ -25,19 +25,16 @@ var content = document.getElementById('content');
 var modalBackground = document.getElementById('modalBackground');
 var modal = document.getElementById('modal');
 
-var sheet = document.createElement('style');
-sheet.innerHTML = "body {width:"+w+"px; height:"+h+"px;} #fit{width:"+h+"px; height:"+h+"px;} .menuContainer{width:"+Math.floor(h*0.294)+"px; height:"+Math.floor(h*0.245)+"px; top:calc(50% - "+Math.floor(h*0.245)+"px); left:calc(50% - "+Math.floor(h*0.294)+"px);} .button{width:"+Math.floor(h*0.14)+"px; height:"+Math.floor(h*0.14)+"px; top:"+butonIH+"px;left:"+butonIW+"px;} .active .button{top:"+butonEH+"px;left:"+butonEW+"px;}";
 
-document.head.appendChild(sheet);
 /*----------------------------------------------------------------------*/
 /*-------------------------------sounds-------------------------------*/
 /*----------------------------------------------------------------------*/
-var backgroundAudio = document.getElementById('backgroundAudio');
+//var backgroundAudio = document.getElementById('backgroundAudio');
 var clickAudio      = document.getElementById('click');
 var hoverAudio      = document.getElementById('hover');
 //backgroundAudio.volume = 0.1; 
-clickAudio.volume =      0.1;
-hoverAudio.volume =      0.1;      
+clickAudio.volume =      0.2;
+hoverAudio.volume =      0.2;      
 /*----------------------------------------------------------------------*/
 /*----------------------determina el video fit--------------------------*/
 /*----------------------------------------------------------------------*/
@@ -47,7 +44,7 @@ intro.oncanplaythrough = function(){
     this.volume = 0;
     this.play();
     this.loop = true;
-    backgroundAudio.play();
+    //backgroundAudio.play();
     setTimeout(function(){
         quees.setAttribute('style','left:'+quesLeft+'px;');
     },1500);
@@ -59,7 +56,7 @@ quees.addEventListener('click',() =>{
     var interface = document.getElementById("fit");
     interface.classList.add('opaque');
     isVieoplayed = true;
-    backgroundAudio.play();
+    //backgroundAudio.play();
     comenzar();
     inactiveMode();
 });
@@ -68,10 +65,10 @@ quees.addEventListener('click',() =>{
 /*----------------------------------------------------------------------*/
 
 function comenzar(){
-    console.log('comenzo');
+    //console.log('comenzo');
     menu.addEventListener('click',() =>{
         if(window.isVieoplayed){
-            console.log('is videoplayed validad');
+            //console.log('is videoplayed validad');
             var menu = document.getElementById('menu');
             var borde= document.getElementById('borde');
             menu.classList.add('active');
@@ -127,7 +124,7 @@ selector.addEventListener('click',() =>{
 function choseInfoImage(n,i){
     var flechas = document.getElementsByClassName('flecha');
     var index = i;
-    console.log(index);
+    //console.log(index);
     for(var k = 0; k<=flechas.length-1; k++){
         flechas[k].classList.add('block')
     }
@@ -197,7 +194,7 @@ function activateInfo(n){
         //console.log('is a string');
         content.src = 'resources/'+contentImg[n];
     }else{
-        console.log('is oter thing else than a string');
+        //console.log('is oter thing else than a string');
         choseInfoImage(n,0);
     }
 }
@@ -264,35 +261,3 @@ modalBackground.addEventListener('click',() =>{
     modalBackground.classList.remove('block');
     modal.src = '';
 });
-
-/*----------------------------------------------------------------------*/
-        /*----------------------inactive state --------------------------*/
-/*----------------------------------------------------------------------*/
-
-
-/*var x;
-var y;
-var coords = "X coords: " + 1 + ", Y coords: " + 1;
-var checkedMouseX;
-var checkedMouseY;
-var checkedCoords = "X coords: " + 1 + ", Y coords: " + 1;
-setInterval(function(){ 
-    checkCoords();
-    if(checkedCoords != coords){
-        checkedCoords = coords;
-    }else{
-        inactive();
-    }
-}, 3000);
-
-function checkCoords(event) {
-    var x = event.clientX;
-    var y = event.clientY;
-    
-    var coords = "X coords: " + x + ", Y coords: " + y;
-    
-}
-function icons(){
-    var icons=document.getElementsByClassName('inner');
-    var videoIndex =Math.floor(Math.random()*(10-0+1)+0);
-}*/
