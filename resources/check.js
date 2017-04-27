@@ -36,8 +36,8 @@ var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
-if( isFirefox||isIE){
+if( isIE){
     alert("Puedes probar con 'Google Chrome', 'mozilla Firefox' u 'Opera' para mejorar la experiencia de navegación.");
-}/*else if(){
+}else if(isFirefox||isSafari){
     navigatorNotSupported();
-}*/
+}
