@@ -49,7 +49,7 @@ intro.oncanplaythrough = function(){
         quees.setAttribute('style','left:'+quesLeft+'px;');
     },1500);
 }
-quees.addEventListener('click',() =>{
+quees.addEventListener('click',function(){
     inicio.setAttribute('style','display:none;opacity:0;z-Index:-10000;');
     intro.pause();
     intro.volume = 0;
@@ -66,7 +66,7 @@ quees.addEventListener('click',() =>{
 
 function comenzar(){
     //console.log('comenzo');
-    menu.addEventListener('click',() =>{
+    menu.addEventListener('click',function(){
         if(window.isVieoplayed){
             //console.log('is videoplayed validad');
             var menu = document.getElementById('menu');
@@ -97,12 +97,12 @@ function comenzar(){
     });
     
     for(var i = 0;i<=menuBotones.length-1; i++){
-        menuBotones[i].addEventListener('mouseover',() =>{
+        menuBotones[i].addEventListener('mouseover',function(){
             if(isButtonActive){
                 hoverAudio.play();
             }
         });
-        menuBotones[i].addEventListener('click',() =>{
+        menuBotones[i].addEventListener('click',function(){
             if(isButtonActive){
                 clickAudio.play();                
             }
@@ -115,7 +115,7 @@ function comenzar(){
 /*----------------------------------------------------------------------*/
 
 
-selector.addEventListener('click',() =>{
+selector.addEventListener('click',function(){
     infoPlace.classList.remove('active');
     menu.classList.remove('info');
     
@@ -253,12 +253,11 @@ function information9(){
     }
 }
 
-content.addEventListener('click',() =>{
+content.addEventListener('click',function(){
     modalBackground.classList.add('block');
     modal.src = content.src;
 });
-modalBackground.addEventListener('click',() =>{
+modalBackground.addEventListener('click',function(){
     modalBackground.classList.remove('block');
     modal.src = '';
 });
-/**/
