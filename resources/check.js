@@ -29,12 +29,15 @@ function navigatorNotSupported(){
     document.getElementById('sorryMsg').setAttribute('style','display:block;');
 }
 
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+var isFirefox = typeof InstallTrigger !== 'undefined';
+var isEdge = !isIE && !!window.StyleMedia;
 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
-var isChrome = !!window.chrome && !!window.chrome.webstore;
-var isEdge = !isIE && !!window.StyleMedia;
-if( isEdge||isIE){
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+if( isFirefox||isIE){
     alert("Puedes probar con 'Google Chrome', 'mozilla Firefox' u 'Opera' para mejorar la experiencia de navegación.");
-}else if(isSafari){
+}/*else if(){
     navigatorNotSupported();
-}
+}*/
