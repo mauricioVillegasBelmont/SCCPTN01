@@ -1,7 +1,6 @@
 /*----------------------------------------------------------------------*/
 /*--------------------------determina el window size--------------------*/
 /*----------------------------------------------------------------------*/
-var chosen =['tecn','alia','cont','llav','prop','serv','cert','comu','even','clie'];
 var w = window.innerWidth;
 var h = window.innerHeight;
 
