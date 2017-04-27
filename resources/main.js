@@ -261,3 +261,5 @@ modalBackground.addEventListener('click',function(){
     modalBackground.classList.remove('block');
     modal.src = '';
 });
+/*cambiados los ()=>{} por Function(){}*/
+/*audio background eleminado*/
