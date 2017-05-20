@@ -24,6 +24,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+html,body{
+    width: 100%;
+    height: 100%;
+}
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -366,7 +370,7 @@ div#menu.active{
 }
 
 #sorryMsg {
-    display: none;
+    display: block;
     width: 100%;
     height: 100%;
     background-color: #afafaf;

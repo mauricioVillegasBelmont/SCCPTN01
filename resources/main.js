@@ -13,13 +13,13 @@ var chosen =['tecn','alia','cont','llav','prop','serv','cert','comu','even','cli
 
 
 var quees =document.getElementById('quees');
+var quesLeft = (w/8);
 var menuBotones = document.getElementsByClassName('button');
 var infoPlace = document.getElementById('info');
 var menu = document.getElementById('menu');
 var infoWrapper = document.getElementById('infoWrapper');
 var selectorWrapper = document.getElementById('selectorWrapper');
 var selector = document.getElementById('selector');
-var quesLeft = (w/8);
 var inicio = document.getElementById('inicio');
 var content = document.getElementById('content');
 var modalBackground = document.getElementById('modalBackground');
@@ -85,7 +85,6 @@ function comenzar(){
                     menuBotones[i].setAttribute('style','-webkit-transform: scale(1)  rotate('+giro2+'deg);-ms-    transform: scale(1) rotate('+giro2+'deg); transform: scale(1) rotate('+giro2+'deg);');
                 }
             }
-            sheet.innerHTML += ".button:hover{width:"+Math.floor(h*0.16)+"px; height:"+Math.floor(h*0.16)+"px;  top:"+butonHH+"px;left:"+butonHW+"px;}"
 /*            for(i=0; i<menuBotones.length; i++){
                 menuBotones[i].setAttribute("onmouseover","buttonSound.play("+notes[i]+ ", 3, 1)");
                 menuBotones[i].setAttribute("onmouseout","buttonSound.play("+notes[i]+ ", 5, 1)");

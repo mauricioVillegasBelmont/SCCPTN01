@@ -1,5 +1,6 @@
 #menu {
     background: url(logo.png) no-repeat #fff;
+    background-size: 70%;
     background-position: center;
 }
 
