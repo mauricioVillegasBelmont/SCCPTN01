@@ -103,6 +103,10 @@ video{
     -moz-   box-shadow: inset 5px 5px 15px -4px rgba(102,102,102,0.5);
             box-shadow: inset 5px 5px 15px -4px rgba(102,102,102,0.5);
 }
+#quees:hover{
+    opacity: 0.9;
+    height: 82%;
+}
 #fit{
     position: relative; 
     margin: 0px auto;
